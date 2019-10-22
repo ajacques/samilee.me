@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: samilee
+  namespace: personalsites
 spec:
   replicas: 1
   selector:
