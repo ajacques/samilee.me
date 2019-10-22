@@ -5,6 +5,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: ajacques/samilee.me
+      pushRemote: true
       registry: index.docker.io
 - name: deploy
   steps:
