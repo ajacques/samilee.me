@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: samilee
+spec:
+  rules:
+  - host: samilee.me
+    http:
+      paths:
+      - backend:
+          serviceName: samilee
+          servicePort: 80
