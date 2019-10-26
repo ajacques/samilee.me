@@ -1,14 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>body {background-color: #FEFCFF;}</style>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: #548687;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px;  
+  border-top: 3px solid #777;
+  background: #EFF3F9;
+  padding: 20px;
+  color: #548687;
+  
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  border-top: 3px solid #777;
+  background-color: white;
+  height: 300px;
+  color: #777 /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #FDFCFF;
+  padding: 10px;
+  text-align: center;
+  color: #548687;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
 <body>
 
-<h1 style="text-align:center;">Sami Lee</h1>
-<h3 style="text-align:center;">Amateur photographer, aspiring designer, and some other things in between.</h3>
-<p>A WIP for all my project stuff.</p>
+
+<header>
+  <h2>Sami Lee</h2>
+</header>
+
+<section>
+  <nav>
+  <h3>Highlighted Projects</h3>
+    <ul>
+      <li><a href="#">Project 1</a></li>
+      <li><a href="#">Project 2</a></li>
+      <li><a href="#">Project 3</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>About me</h1>
+    <p>Amateur photographer, aspiring designer, and some other things in between.</p>
+    <p>I'm an explorer turned dabbler turned creator. From my travels and everyday life, I strive to capture a beauty that communicates not only the subject's own magnificence, but beyond that, its personality.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Always a work in progress.</p>
+</footer>
 
 </body>
-
 </html>
