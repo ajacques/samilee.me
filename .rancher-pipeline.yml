@@ -4,9 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ajacques/samilee.me
-      pushRemote: true
-      registry: index.docker.io
+      tag: samilee.me
 - name: deploy
   steps:
   - applyYamlConfig:

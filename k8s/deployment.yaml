@@ -19,6 +19,6 @@ spec:
         workload.user.cattle.io/workloadselector: deployment-personalsites-samilee
     spec:
       containers:
-      - image: ajacques/samilee.me
+      - image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         name: samilee
       dnsPolicy: ClusterFirst
