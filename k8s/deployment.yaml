@@ -18,6 +18,8 @@ spec:
       labels:
         workload.user.cattle.io/workloadselector: deployment-personalsites-samilee
     spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
       containers:
       - image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         name: samilee
