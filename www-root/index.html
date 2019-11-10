@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
@@ -10,97 +8,241 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #616163
 }
 
-/* Style the header */
-header {
-  background-color: white;
-  padding: 30px;
-  text-align: center;
+/* Border */
+hr.pop1 {
+  border: 1.5px solid #7C7287;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
   font-size: 30px;
-  color: #548687;
+  word-break: break-all;
 }
 
-/* Create two columns/boxes that floats next to each other */
-nav {
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 3px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
   float: left;
-  width: 30%;
-  height: 300px;  
-  border-top: 3px solid #777;
-  background: #EFF3F9;
-  padding: 20px;
-  color: #548687;
-  
+  width: 50%;
+  display: none; /* Hide all elements by default */
 }
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 33.33%;
+    max-width: %;
+  }
 }
 
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  border-top: 3px solid #777;
-  background-color: white;
-  height: 300px;
-  color: #777 /* only for demonstration, should be removed */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
-/* Clear floats after the columns */
-section:after {
+/* Clear floats after rows  */
+.row:after {
   content: "";
   display: table;
   clear: both;
+} 
+
+/* Content */
+.content {
+  background-color: #f9f9f9;
+  padding: 7px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  color: #616163;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #7C7287;
+  color: #f9f9f9;
 }
 
 /* Style the footer */
 footer {
-  background-color: #FDFCFF;
+  background-color: white;
   padding: 10px;
   text-align: center;
-  color: #548687;
+  color: #7C7287;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
 </style>
 </head>
 <body>
 
+<!-- MAIN (Center website) -->
+<div class="main">
 
-<header>
-  <h2>Sami Lee</h2>
-</header>
+<h1>Sami Lee</h1>
+<hr class = pop1>
 
-<section>
-  <nav>
-  <h3>Highlighted Projects</h3>
-    <ul>
-      <li><a href="#">Project 1</a></li>
-      <li><a href="#">Project 2</a></li>
-      <li><a href="#">Project 3</a></li>
-    </ul>
-  </nav>
+<h2>PORTFOLIO</h2>
+<p>Lover of people and places, aspiring designer, and some other things in between.</p>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('People')"> People</button>
+  <button class="btn" onclick="filterSelection('Places')"> Places</button>
+  <button class="btn" onclick="filterSelection('UX')"> UX</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column People">
+    <div class="content">
+      <img src="/images/People/Me.jpg" alt="Sami" style="width:100%">
+      <h4>Hello!</h4>
+      <p>This is me (Sami).</p>
+    </div>
+  </div>
+  <div class="column Places">
+    <div class="content">
+    <img src="/images/Places/VeniceDusk.jpg" alt="Venice at Dusk" style="width:100%">
+      <h4>Venice</h4>
+      <p>The Grand Canal at dusk.</p>
+    </div>
+  </div>
+  <div class="column Places">
+    <div class="content">
+    <img src="/Images/Places/Maui.jpg" alt="Haleakala" style="width:100%">
+      <h4>Haleakala</h4>
+      <p>Sunrise on top of Haleakala in Maui.</p>
+    </div>
+  </div>
   
-  <article>
-    <h1>About me</h1>
-    <p>Amateur photographer, aspiring designer, and some other things in between.</p>
-    <p>I'm an explorer turned dabbler turned creator. From my travels and everyday life, I strive to capture a beauty that communicates not only the subject's own magnificence, but beyond that, its personality.</p>
-  </article>
-</section>
+  <div class="column People">
+    <div class="content">
+      <img src="/Images/People/GirlsWFU.jpg" alt="Girls in front of chapel" style="width:100%">
+    </div>
+  </div>
+  <div class="column Places">
+    <div class="content">
+    <img src="/Images/Places/Dingle.jpg" alt="Dingle" style="width:100%">
+      <h4>Dingle</h4>
+    </div>
+  </div>
+  <div class="column People">
+    <div class="content">
+    <img src="/Images/People/BoltonWedding.jpg" alt="Wedding" style="width:100%">
+    </div>
+  </div>
 
+  <div class="column Places">
+    <div class="content">
+      <img src="/Images/Places/Paris.jpg" alt="Paris" style="width:100%">
+      <h4>Louvre</h4>
+    </div>
+  </div>
+  <div class="column Places">
+    <div class="content">
+    <img src="/Images/Places/CinqueTerre.jpg" alt="Cinque Terre" style="width:100%">
+      <h4>Cinque Terre</h4>
+    </div>
+  </div>
+  <div class="column People">
+    <div class="content">
+    <img src="/Images/People/AudreyItaly.jpg" alt="Audrey" style="width:100%">
+
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<hr class = pop1>
 <footer>
   <p>Always a work in progress.</p>
 </footer>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 
 </body>
 </html>
