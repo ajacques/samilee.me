@@ -9,10 +9,7 @@
           margin-right: 10px;
           font-family: Helvetica, "Trebuchet MS", Arial, sans-serif
         }
-    
-    
-    
-        
+
         .headerfull {
             background-color: #087E8B;
         }
@@ -263,6 +260,4 @@
         
         /* Make all right containers behave like the left ones */
         .right {
-        left: 0%;
-        }
-    
+        left: 0%;}
