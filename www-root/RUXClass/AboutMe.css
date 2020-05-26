@@ -1,0 +1,258 @@
+
+    * {
+        box-sizing: border-box;
+        color: #087E8B;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+      }
+  
+      .headerfull {
+          background-color: #087E8B;
+      }
+      .header, .footer {  
+        display: flex;
+        background-color: #087E8B;
+        float: left;
+        width: 100%;
+      }
+      
+      h1, h2 {
+        font-family: 'Jazz LET','Marker Felt', fantasy;
+        color:#F3F8F2;
+        text-align: center;
+        background-color: #087E8B;
+      }
+  
+      strong {
+          text-decoration: underline;
+          text-decoration-color: #9F9FED;
+          color: #F3F8F2
+      }
+      .mainlogo {
+        background-color: #087E8B;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+      }
+  
+      i {
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 3px;
+        }
+        .down {
+          border: solid #087E8B;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+        .turnright {
+          border: solid #F3F8F2;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+        }
+  /* Style the bottom navigation bar */
+  .footernav {
+      flex: 100%;
+      padding: 20px;
+    }
+  
+  
+  /* Style the bottom navigation bar */
+  .navlink {
+        flex: 16.6%;
+        background-color: #087E8B;
+        padding: 20px;
+        float:left;
+      }
+  
+  /* Style the navigation bar links */
+      .navlink a {
+        color: #F3F8F2;
+        padding: 14px 20px;
+        text-align: center;
+      }
+  
+  /* Change color on hover */
+      .navlink a:hover {
+        color: #9F9FED;
+      }
+  
+      h4, h5 {
+          text-align: center;
+      }
+  
+      .footer {
+          display:block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+          padding: 20px;
+          background-color: #087E8B;
+        }
+  
+      .flex {  
+        display: flex;
+        width: 100%;
+      }
+      
+      .twocolumn {
+        float: left;
+        width: 50%;
+        padding: 5px;
+        text-align: center;
+      }
+  
+      .left {
+        flex: 23.4%;
+        padding: 20px;
+      }
+      
+      .right {
+        flex: 76.6%;
+        padding: 20px;
+      }
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #087E8B;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    
+    /* Container around content */
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    
+    /* The circles on the timeline */
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: #087E8B;
+      border: 4px solid #087E8B;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    /* Place the container to the left */
+    .left {
+      left: 0;
+    }
+    
+    /* Place the container to the right */
+    .right {
+      left: 50%;
+    }
+    
+    /* Add arrows to the left container (pointing right) */
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid #FAFAFA;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #FAFAFA;
+    }
+    
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid #FAFAFA;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #FAFAFA transparent transparent;
+    }
+    
+    /* Fix the circle for containers on the right side */
+    .right::after {
+      left: -16px;
+    }
+    
+    /* The actual content */
+    .content {
+      padding: 20px 30px;
+      background-color: #FAFAFA;
+      position: relative;
+      border-radius: 6px;
+    }
+    
+    /* Media queries - Responsive timeline on screens less than 600px wide */
+    @media screen and (max-width: 600px) {
+      /* Place the timelime to the left */
+      .timeline::after {
+      left: 31px;
+      }
+      
+      /* Full-width containers */
+      .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+      }
+      
+      /* Make sure that all arrows are pointing leftwards */
+      .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+      }
+    
+      /* Make sure all circles are at the same spot */
+      .left::after, .right::after {
+      left: 15px;
+      }
+      
+      /* Make all right containers behave like the left ones */
+      .right {
+      left: 0%;
+      }
+      /* Makes the columns stack on top of each other instead of next to each other */
+      .header {   
+          flex-direction: column;
+        }
+      .flex {   
+          flex-direction: column;
+        }
+        
+      }
+      
+      @media screen and (max-width: 500px) {
+        .twocolumn, .fourcolumn {
+          width: 100%;
+        }
+        .navlink {   
+          flex-direction: column;
+        }
+      }
+  
