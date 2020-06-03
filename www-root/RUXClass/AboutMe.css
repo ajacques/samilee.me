@@ -10,6 +10,39 @@
           font-family: Helvetica, "Trebuchet MS", Arial, sans-serif
         }
 
+
+        .leftnav {
+          width: 30%;
+          margin: 20px
+        }
+
+
+        .leftnavbutton {
+          background-color: #087E8B;
+          color: #F3F8F2;
+          margin: 50px;
+          width: 100%;
+          display: block;
+        }
+        .mainbody {
+          display: flex;
+          width: 100%;
+        }
+
+        .mainpictures {
+          display: flex;
+          width: 70%;
+        }
+
+        .middlepic {
+          display: flex;
+          width: 50%;
+        }
+
+        .rightpics {
+          display: flex;
+          width: 50%;
+        }
         .headerfull {
             background-color: #087E8B;
         }
@@ -260,4 +293,8 @@
         
         /* Make all right containers behave like the left ones */
         .right {
-        left: 0%;}}
+        left: 0%;}
+
+        .mainbody, .mainpictures {flex-flow: column; }
+        .leftnav, .middlepic, .rightpics {width: 100%}
+      }
