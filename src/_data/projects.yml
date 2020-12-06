@@ -1,0 +1,46 @@
+pets:
+  title: Amazon Pets Storefront Redesign
+  image: /images/MainImages/PetsSubNavScreenshot.jpg
+  image_alt: Screenshot of Amazon Pets navigation
+  message: "UX | Amazon Pets Navigation"
+  tags:
+  - UX
+  - Redesign
+chewy:
+  image: /images/MainImages/ChewyScreenshot.jpg
+  image_alt: Screenshot of Chewy New Pet Essentials page
+  message: UR | Chewy New Pet Essentials
+  title: Chewy.com New Pet Parents User Research
+  tags:
+  - UR
+  - UX
+WFMPN:
+  image: /images/MainImages/WFMScreenshot.jpg
+  image_alt: Whole Foods on Prime Now screenshot
+  title: Whole Foods on Prime Now Redesign
+  message: UX | Amazon Whole Foods on Prime Now Case Study & Redesign
+  tags:
+    - UX
+    - Redesign
+appaws:
+  image: /images/MainImages/Appaws_Main.png
+  image_alt: Mock of Appaws Airline website
+  title: Appaws Product Design and Research
+  message: UX | Appaws Product Design & Research
+  tags:
+    - UX
+    - UR
+women:
+  image: /images/MainImages/RunnerGraphic.jpg
+  image_alt: Strong woman running
+  title: Inspiring Women Graphic Illustrations
+  message: Graphics | Inspiring Women
+  tags:
+  - Graphic Design
+aasdm:
+  image: /images/MainImages/AASDM_Main.jpg
+  image_alt: Adopt a Shelter Dog Month with Amazon Pets Event storefront screenshot
+  title: Amazon Pets Celebrates <i>Adopt a Shelter Dog Month</i>
+  message: Marketing | Amazon Pets "Adopt a Shelter Dog Month"
+  tags:
+  - Marketing

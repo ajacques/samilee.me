@@ -1,0 +1,14 @@
+<div class="container-fluid pt70 pb70">
+    <div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
+        {% for project in site.data.projects %}
+        {% if tag_filter == nil or project[1].tags contains tag_filter %}
+        <div class="fh5co-project masonry-brick">
+            <a href="/portfolio/{{ project[0] }}">
+                <img src="{{ project[1].image }}" alt="{{ project[1].image_alt }}">
+                <h2>{{ project[1].message }}</h2>
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

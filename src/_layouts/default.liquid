@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+{% render "head", metadata: site.metadata, page: page %}
+<body>
+    {% render "header", metadata: site.metadata, page: page %}
+    {{ content }}
+    {% render "footer", metadata: site.metadata, page: page %}
+</body>
+</html>

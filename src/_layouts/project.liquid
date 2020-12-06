@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% render "head", metadata: site.metadata, page: page %}
+<body>
+    {% render "header", metadata: site.metadata %}
+    {% assign project = site.data.projects[page.project] %}
+    <div class="page-content">
+        <h1 class="mb0">{{ project.title }}</h1>
+        <div class="meta">
+            {% for tag in project.tags %}<a class="tag-item" href="/portfolio/{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+            </div>
+        {{ content }}
+    </div>
+    <div class="page-content">
+            <h1 class="mb0">More projects</h1>
+            </div>
+    {% render "project_list", site: site %}
+    {% render "footer", metadata: site.metadata %}
+</body>
+</html>
