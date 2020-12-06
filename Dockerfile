@@ -54,6 +54,7 @@ RUN yarn install --check-files
 COPY . /usr/src/app
 
 # Compile the assets
+RUN RACK_ENV=production NODE_ENV=production yarn webpack-build
 RUN RACK_ENV=production NODE_ENV=production yarn build
 
 FROM nginx:1.17.1-alpine
