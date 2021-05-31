@@ -57,6 +57,6 @@ COPY . /usr/src/app
 RUN RACK_ENV=production NODE_ENV=production yarn webpack-build
 RUN RACK_ENV=production NODE_ENV=production yarn build
 
-FROM nginx:1.19.9-alpine
+FROM nginx:1.21.0-alpine
 
 COPY --from=production /usr/src/app/output /usr/share/nginx/html
