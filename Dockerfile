@@ -1,4 +1,4 @@
-FROM ruby:2.7.1-alpine AS builder
+FROM ruby:3.0.2-alpine AS builder
 
 RUN apk add --no-cache \
     #
